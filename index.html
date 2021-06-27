@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!--<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather app</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Weather Forecast hosted with <a href="https://www.netlify.com">Netlify</a></h1>
+      <div class="weather-app-box">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city..."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <h1 id="city">Sidney NSW, Australia</h1>
+        <ul>
+          <li id="date">
+            Monday 10:00
+          </li>
+          <li id="description">Partly cloudy</li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <!-- a imagem do icon sun nao estava alinhada com a temperatura, assim vamos usar o float do bootstrap-->
+            <div class="clearfix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="sun"
+                class="weather-icon float-left"
+              />
+              <!--adicionamos float left a classe por causa da imagem-->
+              <div class="float-left">
+                <span class="temperature" id="temperature">19</span
+                ><span class="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+            <!-- <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary">Temperature</button>
+              <button type="button" class="btn btn-primary">
+                Precipitation
+              </button>
+              <button type="button" class="btn btn-primary">Wind</button>
+            </div> -->
+          </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-2">
+              Monday
+              <br />
+              <img src="images/sun.png" width="50"/>
+              <br />
+              <strong>26°</strong> / 13°
+            </div>
+            <div class="col-2">
+              Tuesday
+              <br />
+              <img src="images/sun_clouds.png" width="50"/>
+              <br />
+              <strong>25°</strong> / 11°
+            </div>
+            <div class="col-2">
+              Wednesday
+              <br />
+              <img src="images/sun_clouds_thunder.png" width="50"/>
+              <br />
+              <strong>25°</strong> / 11°
+            </div>
+            <div class="col-2">
+              Thursday
+              <br />
+              <img src="images/clouds_thunder.png" width="50"/>
+              <br />
+              <strong>25°</strong> / 11°
+            </div>
+            <div class="col-2">
+              Friday
+              <br />
+              <img src="images/sun_clouds_rain.png" width="50"/>
+              <br />
+              <strong>25°</strong> / 11°
+            </div> 
+            <div class="col-2">
+              Saturday
+              <br />
+              <img src="images/clouds_rain.png" width="50"/>
+              <br />
+              <strong>25°</strong> / 11°
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
